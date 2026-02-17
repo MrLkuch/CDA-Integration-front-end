@@ -342,7 +342,6 @@ section:not(:first-child) {
 .project {
   background: #165963;
   color: #cffefb;
-  padding: 40px 0;
   text-align: center;
 }
 .project .intro-segment {
@@ -412,13 +411,22 @@ section:not(:first-child) {
   margin-bottom: 16px;
 }
 
+@media (min-width: 1024px) {
+  .project .container-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .project-card {
+    flex: 1 1 32%;
+    margin-bottom: 0;
+  }
+}
 .learning {
-  display: grid;
   justify-content: center;
   color: #0f878f;
   background: #ffffff;
-  padding: 40px 0;
-  padding: 40px 0;
+  margin-bottom: 40px;
   text-align: center;
 }
 .learning .intro-segment {
@@ -479,6 +487,22 @@ section:not(:first-child) {
   height: 16px;
 }
 
+@media (min-width: 1024px) {
+  .learning .container-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .learning .container-card .learning-card-wrapper {
+    flex: 1 1 25%;
+  }
+  .learning .container-card .learning-card-wrapper .learning-card {
+    margin: 0;
+  }
+  .learning .container-card .learning-card-wrapper .learning-card__image {
+    height: 250px;
+  }
+}
 .schedule {
   background: #07d3d3;
   color: #ffffff;

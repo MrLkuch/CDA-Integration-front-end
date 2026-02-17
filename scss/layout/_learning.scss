@@ -1,12 +1,11 @@
 @use '../abstracts/variables' as *;
 
 .learning {
-  display: grid;
   justify-content: center;
   color: $primary700;
   background: $neutral0;
-  padding: $space * 5 0;
-  padding: $space * 5 0;
+  margin-bottom: $space*5;
+
   text-align: center;
 
   .intro-segment {
@@ -74,5 +73,26 @@
     }
   }
 }
+
+}
+
+@media (min-width: 1024px) {
+  .learning .container-card {
+    display: flex;
+    justify-content: space-between;
+    gap: $space * 2;
+
+    .learning-card-wrapper {
+      flex: 1 1 25%;
+      
+      .learning-card {
+        margin: 0;
+    
+        &__image {
+          height: 250px;
+        }
+      }
+    }
+  }
 
 }
