@@ -2,7 +2,6 @@
 
 .challenge {
   background: $neutral0;
-  padding: $space * 6 0;
 
   &__title {
     color: $primary800;
@@ -17,7 +16,7 @@
 
   &__text {
     color: $primary800;
-    padding: 0 $space*3;
+    padding: $space*3;
   }
 }
 
@@ -46,5 +45,23 @@
   p {
     color: $neutral600;
     line-height: 1.6;
+  }
+}
+
+@media (min-width: 1024px) {
+  .challenge__grid {
+    flex-direction: row;          
+    justify-content: space-between;
+    flex-wrap: nowrap;            
+  }
+
+  .card-left,
+  .card-right {
+    justify-self: center;             
+    border-radius: $radius-lg;    
+  }
+
+  .challenge__title {
+    text-align: left;            
   }
 }

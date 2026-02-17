@@ -17,7 +17,7 @@
   border-bottom-right-radius: $radius-lg;
   padding: $space * 4;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-  align-self: flex-start; 
+  justify-self: flex-start; 
 }
 
 .card-right {
@@ -27,7 +27,7 @@
   border-bottom-left-radius: $radius-lg;
   padding: $space * 4;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-  align-self: flex-end; 
+  justify-self: flex-end; 
 }
 
 section {
@@ -35,5 +35,11 @@ section {
     border-top-left-radius: $radius-md;
     border-top-right-radius: $radius-md;
     margin-top: -$space * 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding: $space*10;
   }
 }
