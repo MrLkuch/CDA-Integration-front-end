@@ -10,10 +10,21 @@
   }
 
   .planning-card {
+     display: flex;
+    flex-direction: column;
+    gap: $space * 3;
     background: $neutral0;
     color: $neutral800;
     padding: $space * 3;
     border-radius: 8px;
+
+    .planning-day {
+        display: none;          // par défaut, cacher tous les jours
+    }
+
+    .planning-day:first-child {
+        display: block;          // afficher seulement le premier
+    }
 
     p {
         margin-bottom: $space * 2;
@@ -54,6 +65,22 @@
         }
     }
 
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .schedule {
+        .planning-card {
+          flex-direction: row;         
+          justify-content: space-between;
+          flex-wrap: nowrap;            
+          .planning-day {
+            display: block;
+            width: 18%;                   
+          }
+        }
     }
 
 }
