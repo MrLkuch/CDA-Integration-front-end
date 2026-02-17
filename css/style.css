@@ -1,0 +1,451 @@
+@charset "UTF-8";
+/* Colors */
+/* Radius */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f5f5f5;
+  color: #292929;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 32px;
+}
+
+h3 {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.other-warning {
+  color: #ff8a22;
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 32px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #cffefb;
+  color: #165963;
+}
+
+.btn-secondary {
+  background: #f99c07;
+  color: #101010;
+}
+
+.btn-outline {
+  border: 2px solid #cffefb;
+  color: #cffefb;
+}
+
+.card,
+.project-card,
+.learning-card,
+.planning-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.card-left {
+  width: 90%;
+  background: #e6e6e6;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  align-self: flex-start;
+}
+
+.card-right {
+  width: 90%;
+  background: #e6e6e6;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  align-self: flex-end;
+}
+
+section:not(:first-child) {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  margin-top: -16px;
+}
+
+.topbar {
+  background: #09aab1;
+  padding: 16px 0;
+  color: #ffffff;
+  border-bottom: solid 0.5rem;
+  border-color: #07d3d3;
+}
+.topbar__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topbar__left .logo {
+  height: 32px;
+}
+.topbar__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Bouton icône (notif) */
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.icon-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Profile */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.profile .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+}
+.profile .chevron {
+  width: 16px;
+  height: 16px;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #0f878f;
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+.bottom-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  text-decoration: none;
+  color: #e6e6e6;
+}
+.bottom-nav a img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+}
+.bottom-nav a span {
+  text-align: center;
+}
+
+.hero {
+  color: #cffefb;
+  background-color: #165963;
+  padding: 80px 16px;
+}
+.hero .hero-title {
+  width: 70%;
+}
+.hero .video-card {
+  position: relative;
+  margin: 24px 0;
+}
+.hero .video-card .video-placeholder {
+  height: 200px;
+  background: #d6d6d6;
+  border-radius: 24px;
+}
+.hero .video-card .play-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero .video-card .play-button .play-icon {
+  width: 50%;
+}
+
+.challenge {
+  background: #ffffff;
+  padding: 48px 0;
+}
+.challenge__title {
+  color: #166f78;
+  margin-bottom: 40px;
+}
+.challenge__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.challenge__text {
+  color: #166f78;
+  padding: 0 24px;
+}
+
+/* Card */
+.challenge-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.challenge-card__img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  margin-bottom: 24px;
+}
+.challenge-card h4 {
+  margin-bottom: 16px;
+}
+.challenge-card p {
+  color: #575757;
+  line-height: 1.6;
+}
+
+.project {
+  background: #165963;
+  color: #cffefb;
+  padding: 40px 0;
+  text-align: center;
+}
+.project .intro-segment {
+  margin-bottom: 40px;
+}
+.project .project-card {
+  text-align: center;
+  background: #0f878f;
+}
+.project .project-card h2 {
+  font-weight: 100;
+}
+.project .project-card .file-dropzone {
+  border: 2px dashed #cffefb;
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+  cursor: pointer;
+}
+.project .project-card .file-dropzone img {
+  width: 10%;
+}
+.project .project-card .file-dropzone p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+.project .project-card .file-dropzone:hover {
+  background: #f5f5f5;
+}
+.project .project-card .file-dropzone.loaded {
+  text-align: start;
+  background: #09aab1;
+  border: 0;
+  justify-content: space-between;
+  padding: 24px;
+}
+.project .project-card .file-dropzone.loaded .file-info {
+  display: flex;
+  flex-direction: column;
+}
+.project .project-card .file-dropzone.loaded .file-info .file-name {
+  font-weight: 500;
+  color: #292929;
+}
+.project .project-card .file-dropzone.loaded .file-info .file-size {
+  font-size: 0.8rem;
+  color: #767676;
+}
+.project .project-card .file-dropzone.loaded .file-loader {
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+  background: #07d3d3;
+  margin-top: 8px;
+}
+.project .project-card .btn {
+  margin: 8px 0;
+}
+.project .project-card .other-warning {
+  margin-top: 24px;
+}
+.project .project-card {
+  /* Formats acceptés */
+}
+.project .project-card .file-formats {
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+}
+
+.learning {
+  display: grid;
+  justify-content: center;
+  color: #0f878f;
+  background: #ffffff;
+  padding: 40px 0;
+  padding: 40px 0;
+  text-align: center;
+}
+.learning .intro-segment {
+  margin-bottom: 40px;
+}
+.learning .learning-card-wrapper {
+  position: relative;
+  width: 100%;
+}
+.learning .learning-card-wrapper .learning-card {
+  display: flex;
+  justify-content: space-between;
+  clip-path: url(#myClip);
+  background-color: #0f878f;
+  padding: 16px;
+  box-sizing: border-box;
+}
+.learning .learning-card-wrapper .learning-card__image {
+  width: 50%;
+  height: 200px;
+  background: #d6d6d6;
+  border-radius: 16px;
+}
+.learning .learning-card-wrapper .learning-card__content {
+  padding-left: 8px;
+  width: 50%;
+  text-align: left;
+  margin-top: 8px;
+}
+.learning .learning-card-wrapper .learning-card__content .tag {
+  display: flex;
+  justify-self: right;
+  color: #0f878f;
+  font-size: 12px;
+  background: #d6d6d6;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+.learning .learning-card-wrapper .learning-card__content h4 {
+  color: white;
+  margin-top: 4px;
+}
+.learning .learning-card-wrapper .arrow {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25%;
+  height: 40px;
+  background: #f99c07;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.learning .learning-card-wrapper .arrow img {
+  width: 16px;
+  height: 16px;
+}
+
+.schedule {
+  background: #07d3d3;
+  padding: 40px 0;
+  color: #ffffff;
+  text-align: center;
+}
+.schedule .light-text {
+  color: #d6d6d6;
+}
+.schedule .planning-card {
+  background: #ffffff;
+  color: #292929;
+  padding: 24px;
+  border-radius: 8px;
+}
+.schedule .planning-card p {
+  margin-bottom: 16px;
+}
+.schedule .planning-card .planning-item {
+  padding: 8px;
+  margin-bottom: 16px;
+  background: #f5f5f5;
+}
+.schedule .planning-card .planning-item ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.schedule .planning-card .planning-item ul li {
+  margin-bottom: 4px;
+}
+.schedule .planning-card .planning-item.light-blue {
+  background: #cffefb;
+}
+.schedule .planning-card .planning-item.secondary {
+  background: #fff3c6;
+}
+.schedule .planning-card .planning-item.highlight {
+  background: #f99c07;
+}
+.schedule .planning-card .planning-item.dark-blue {
+  color: #cffefb;
+  background: #0f878f;
+  justify-content: space-between;
+  display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */

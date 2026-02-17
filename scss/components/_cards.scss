@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as *;
+
+.card,
+.project-card,
+.learning-card,
+.planning-card {
+  background: $neutral0;
+  border-radius: $radius-lg;
+  padding: $space * 3;
+  margin-bottom: $space * 3;
+}
+
+.card-left {
+  width: 90%;
+  background: $neutral200;
+  border-top-right-radius: $radius-lg;
+  border-bottom-right-radius: $radius-lg;
+  padding: $space * 4;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  align-self: flex-start; 
+}
+
+.card-right {
+  width: 90%;
+  background: $neutral200;
+  border-top-left-radius: $radius-lg;
+  border-bottom-left-radius: $radius-lg;
+  padding: $space * 4;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  align-self: flex-end; 
+}
+
+section {
+  &:not(:first-child) {
+    border-top-left-radius: $radius-md;
+    border-top-right-radius: $radius-md;
+    margin-top: -$space * 2;
+  }
+}

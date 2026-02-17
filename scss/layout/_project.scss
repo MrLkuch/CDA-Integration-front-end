@@ -1,0 +1,87 @@
+@use '../abstracts/variables' as *;
+
+.project {
+  background: $primary900;
+  color: $primary100;
+  padding: $space * 5 0;
+  text-align: center;
+
+  .intro-segment {
+      margin-bottom: $space*5;
+  }
+
+  .project-card {
+    text-align: center;
+    background: $primary700;
+
+    h2 {
+        font-weight: 100;
+    }
+    .file-dropzone {
+      border: 2px dashed $primary100;
+      border-radius: $radius-md;
+      padding: $space * 4;
+      text-align: center;
+      cursor: pointer;
+
+      img {
+        width: 10%;
+      }
+    
+      p {
+        margin: 0;
+        font-size: 0.9rem;
+      }
+    
+      &:hover {
+        background: $neutral100;
+      }
+
+      &.loaded {
+        text-align: start;
+        background: $primary600;
+        border: 0;
+        justify-content: space-between;
+        padding: $space * 3;
+
+        .file-info {
+        display: flex;
+        flex-direction: column;
+
+        .file-name {
+            font-weight: 500;
+            color: $neutral800;
+        }
+
+        .file-size {
+            font-size: 0.8rem;
+            color: $neutral500;
+        }
+        }
+
+        .file-loader {
+        width: 100%;
+        height: 12px;
+        border-radius: $radius-full;
+        background: $primary500;
+        margin-top: $space;
+        }
+       }
+
+    }
+    
+    .btn {
+        margin: $space 0;
+    }
+
+    .other-warning {
+      margin-top: $space * 3
+    }
+
+    /* Formats acceptés */
+    .file-formats {
+      font-size: 0.8rem;
+      margin-bottom: $space * 2;
+    }
+  }
+}

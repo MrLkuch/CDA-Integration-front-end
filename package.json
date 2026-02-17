@@ -1,0 +1,26 @@
+{
+  "name": "cda-integration-front-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss/main.scss css/style.css",
+    "watch": "sass --watch scss/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrLkuch/CDA-Integration-front-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MrLkuch/CDA-Integration-front-end/issues"
+  },
+  "homepage": "https://github.com/MrLkuch/CDA-Integration-front-end#readme",
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
+}

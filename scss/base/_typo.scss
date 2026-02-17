@@ -1,0 +1,27 @@
+@use '../abstracts/variables' as *;
+
+h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: $space * 3;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: $space * 4;
+}
+
+h3 {
+  font-size: 16px;
+  margin-bottom: $space * 3;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: $space *2;
+}
+
+.other-warning {
+  color: $other_warning;
+}

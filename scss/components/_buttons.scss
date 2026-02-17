@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as *;
+
+.btn {
+  display: inline-block;
+  padding: $space * 2 $space * 4;
+  border-radius: $radius-full;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: $primary100;
+  color: $primary900;
+}
+
+.btn-secondary {
+  background: $secondary500;
+  color: $neutral950;
+}
+
+.btn-outline {
+  border: 2px solid $primary100;
+  color: $primary100;
+}

@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.hero {
+  color: $primary100 ;
+  background-color: $primary900;
+  padding: $space * 10 $space * 2;
+
+  .hero-title {
+    width: 70%;
+  }
+
+  .video-card {
+    position: relative;
+    margin: $space * 3 0;
+
+    .video-placeholder {
+      height: 200px;
+      background: $neutral300;
+      border-radius: $radius-lg;
+    }
+
+    .play-button {
+      @include flex-center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+      background: $neutral0;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      
+      .play-icon {
+        width: 50%;
+      }
+    }
+  }
+}

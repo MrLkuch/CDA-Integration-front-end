@@ -1,0 +1,93 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.topbar {
+  background: $primary600;
+  padding: $space * 2 0;
+  color: $neutral0;
+  border-bottom: solid 0.5rem;
+  border-color: $primary500;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left {
+    .logo {
+      height: 32px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: $space * 2;
+  }
+}
+
+/* Bouton icône (notif) */
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Profile */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid $neutral0;
+  }
+
+  .chevron {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: $primary700;
+  display: flex;
+  justify-content: space-around;
+  padding: $space * 2 0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    text-decoration: none;
+    color: $neutral200;
+
+    img {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 4px;
+    }
+
+    span {
+      text-align: center;
+    }
+  }
+}
+

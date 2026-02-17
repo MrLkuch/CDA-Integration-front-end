@@ -1,0 +1,60 @@
+@use '../abstracts/variables' as *;
+
+.schedule {
+  background: $primary500;
+  padding: $space * 5 0;
+  color: $neutral0;
+  text-align: center;
+
+  .light-text {
+    color: $neutral300;
+  }
+
+  .planning-card {
+    background: $neutral0;
+    color: $neutral800;
+    padding: $space * 3;
+    border-radius: 8px;
+
+    p {
+        margin-bottom: $space * 2;
+    }
+
+    .planning-item {
+        padding: $space;
+        margin-bottom: $space * 2;
+        background: $neutral100;
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+
+        li {
+            margin-bottom: $space / 2;
+        }
+        }
+
+        &.light-blue {
+            background: $primary100;
+        }
+
+        &.secondary {
+            background: $secondary100;
+        }
+
+        &.highlight {
+            background: $secondary500;
+        }
+
+        &.dark-blue {
+            color: $primary100;
+            background: $primary700;
+            justify-content: space-between;
+            display: flex;
+        }
+    }
+
+    }
+
+}

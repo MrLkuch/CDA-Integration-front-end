@@ -1,0 +1,78 @@
+@use '../abstracts/variables' as *;
+
+.learning {
+  display: grid;
+  justify-content: center;
+  color: $primary700;
+  background: $neutral0;
+  padding: $space * 5 0;
+  padding: $space * 5 0;
+  text-align: center;
+
+  .intro-segment {
+      margin-bottom: $space*5;
+  }
+
+.learning-card-wrapper {
+  position: relative;
+  width: 100%;
+
+  .learning-card {
+    display: flex;
+    justify-content: space-between;
+    clip-path: url(#myClip);
+    background-color: $primary700;
+    padding: 16px;
+    box-sizing: border-box;
+
+    &__image {
+      width: 50%;
+      height: 200px;
+      background: $neutral300;
+      border-radius: 16px;
+    }
+
+    &__content {
+      padding-left: $space;
+      width: 50%;
+      text-align: left;
+      margin-top: 8px;
+
+      .tag {
+        display: flex;
+        justify-self: right;
+        color: $primary700;
+        font-size: 12px;
+        background: $neutral300;
+        padding: 4px 8px;
+        border-radius: $radius-full;
+      }
+
+      h4 {
+        color: white;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  .arrow {
+    position: absolute; 
+    bottom: 0;
+    right: 0;
+    width: 25%;
+    height: 40px;
+    background: $secondary500;
+    border-radius: $radius-full;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+}
