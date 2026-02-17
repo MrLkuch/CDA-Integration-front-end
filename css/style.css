@@ -17,7 +17,6 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1200px;
   padding: 0 24px;
   margin: 0 auto;
 }
@@ -188,14 +187,34 @@ section:not(:first-child) {
 .hero {
   color: #cffefb;
   background-color: #165963;
-  padding: 80px 16px;
+  padding: 64px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
-.hero .hero-title {
-  width: 70%;
+.hero .hero-left {
+  padding: 0;
+  text-align: center;
+}
+.hero .hero-left .hero-title {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+.hero .hero-left p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-top: 8px;
+}
+.hero .hero-left .btn {
+  margin-top: 16px;
+}
+.hero .hero-right {
+  display: none;
 }
 .hero .video-card {
   position: relative;
-  margin: 24px 0;
+  width: 100%;
+  max-width: 350px;
 }
 .hero .video-card .video-placeholder {
   height: 200px;
@@ -217,6 +236,40 @@ section:not(:first-child) {
 }
 .hero .video-card .play-button .play-icon {
   width: 50%;
+}
+@media (min-width: 1024px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hero .hero-left,
+  .hero .hero-right {
+    width: 50%;
+  }
+  .hero .hero-left {
+    padding: 80px;
+    text-align: left;
+  }
+  .hero .hero-left .hero-title {
+    font-size: 3rem;
+  }
+  .hero .hero-left p {
+    font-size: 1.2rem;
+  }
+  .hero .hero-right {
+    display: flex;
+    justify-content: center;
+  }
+  .hero .video-card {
+    max-width: 500px;
+  }
+  .hero .video-card.mobile {
+    display: none;
+  }
+  .hero .video-card .video-placeholder {
+    height: 300px;
+  }
 }
 
 .challenge {

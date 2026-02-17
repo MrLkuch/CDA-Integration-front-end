@@ -2,17 +2,43 @@
 @use '../abstracts/mixins' as *;
 
 .hero {
-  color: $primary100 ;
+  color: $primary100;
   background-color: $primary900;
-  padding: $space * 10 $space * 2;
+  padding: $space * 8 $space * 2;
+  display: flex;
+  flex-direction: column;
+  gap: $space * 4;
 
-  .hero-title {
-    width: 70%;
+  .hero-left {
+    padding: 0;
+    text-align: center;
+
+    .hero-title {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-top: $space;
+    }
+
+    .btn {
+      margin-top: $space * 2;
+    }
   }
 
+  .hero-right {
+    display: none;
+
+  }
   .video-card {
     position: relative;
-    margin: $space * 3 0;
+    width: 100%;
+    max-width: 350px;
+
+
 
     .video-placeholder {
       height: 200px;
@@ -30,10 +56,54 @@
       background: $neutral0;
       border-radius: 50%;
       transform: translate(-50%, -50%);
-      
+
       .play-icon {
         width: 50%;
       }
     }
   }
+
+  // --- Desktop / PC --- 
+  @media (min-width: 1024px) {
+    flex-direction: row;         
+    align-items: center;
+    justify-content: space-between;
+
+    .hero-left,
+    .hero-right {
+      width: 50%;
+    }
+
+    .hero-left {
+      padding: $space * 10;
+      text-align: left;
+
+      .hero-title {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    .hero-right {
+      display: flex;
+      justify-content: center;
+
+    }
+
+    .video-card {
+      max-width: 500px;
+
+      &.mobile{
+        display: none;
+      }
+
+      .video-placeholder {
+        height: 300px;
+      }
+    }
+  }
 }
+
