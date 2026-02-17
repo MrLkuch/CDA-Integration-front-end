@@ -4,11 +4,13 @@
 .hero {
   color: $primary100;
   background-color: $primary900;
-  padding: $space * 8 $space * 2;
-  display: flex;
-  flex-direction: column;
-  gap: $space * 4;
-
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: $space * 4;
+    
+  }
   .hero-left {
     padding: 0;
     text-align: center;
@@ -65,9 +67,11 @@
 
   // --- Desktop / PC --- 
   @media (min-width: 1024px) {
-    flex-direction: row;         
-    align-items: center;
-    justify-content: space-between;
+    .container {
+      flex-direction: row;         
+      align-items: center;
+      justify-content: space-between;
+    }
 
     .hero-left,
     .hero-right {

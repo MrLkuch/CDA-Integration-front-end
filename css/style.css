@@ -17,10 +17,15 @@ body {
 
 .container {
   width: 100%;
-  padding: 0 24px;
+  padding: 40px 24px;
   margin: 0 auto;
 }
 
+@media (min-width: 1024px) {
+  .container {
+    padding: 0;
+  }
+}
 h1 {
   font-size: 32px;
   font-weight: 800;
@@ -192,7 +197,8 @@ section:not(:first-child) {
 .hero {
   color: #cffefb;
   background-color: #165963;
-  padding: 64px 16px;
+}
+.hero .container {
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -243,7 +249,7 @@ section:not(:first-child) {
   width: 50%;
 }
 @media (min-width: 1024px) {
-  .hero {
+  .hero .container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -475,7 +481,6 @@ section:not(:first-child) {
 
 .schedule {
   background: #07d3d3;
-  padding: 40px 0;
   color: #ffffff;
   text-align: center;
 }
